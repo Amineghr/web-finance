@@ -1,0 +1,99 @@
+<div class="container-fluid bg-primary px-5 d-none d-lg-block">
+    <div class="row gx-0">
+        <div class="col-lg-8 text-left text-lg-start mb-2 mb-lg-1">
+            <div class="d-inline-flex align-items-center" style="height: 45px;">
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://twitter.com/"><i class="fab fa-github fw-normal"></i></a>
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.facebook.com/"><i class="fab fa-facebook-f fw-normal"></i></a>
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="linkedin.com"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.instagram.com/"><i class="fab fa-instagram fw-normal"></i></a>
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href="https://www.youtube.com/"><i class="fab fa-youtube fw-normal"></i></a>
+            </div>
+        </div>
+        <div class="col-lg-4 text-right text-lg-end">
+            <div class="d-inline-flex align-items-center" style="height: 45px;">
+                <a routerLink="/user/contact" class="me-3 text-light"><small><i class="fa fa-phone me-2"></i>Contact Us</small></a>
+                <a routerLink="/user/about" class="me-3 text-light"><small><i class="fa fa-comments me-2"></i>About</small></a>
+                <a routerLink="/register" class="me-3 text-light"><small><i class="fa fa-user me-2"></i>Register</small></a>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle text-light" data-bs-toggle="dropdown"><small><i class="fa fa-home me-2"></i> My Dashboard</small></a>
+                    <div class="dropdown-menu rounded">
+                        <a href="#" class="dropdown-item"><i class="fas fa-user-alt me-2"></i> My Profile</a>
+                        <a href="#" class="dropdown-item"><i class="fas fa-comment-alt me-2"></i> Inbox</a>
+                        <a href="#" class="dropdown-item"><i class="fas fa-bell me-2"></i> Notifications</a>
+                        <a href="#" class="dropdown-item"><i class="fas fa-cog me-2"></i> Account Settings</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal"><i class="fas fa-power-off me-2"></i> Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="/user/home"><img src="" alt="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-10 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="/user/Form">Customer Space</a>
+            </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="index.html">Home Page 1</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPages" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages <i class="icofont-rounded-down"></i></a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownPages">
+                        <li><a class="dropdown-item" href="404.html">404 Error</a></li>
+                        <li><a class="dropdown-item" href="404.html">404 Error</a></li>
+                        <li><a class="dropdown-item" href="404.html">404 Error</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlogs" role="button" data-bs-toggle="dropdown" aria-expanded="false">Blogs <i class="icofont-rounded-down"></i></a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownBlogs">
+                        <li><a class="dropdown-item" href="blog-single.html">Blog Details</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/user/conseiller">Find an advisor</a>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+    <a href="login" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-5">Login Now</a>
+  </nav>
+  
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Select "Logout" below if you are ready to end your current session.
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-primary" href="/login">Logout</a>
+            </div>
+        </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+  

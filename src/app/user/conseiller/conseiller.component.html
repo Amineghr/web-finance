@@ -1,0 +1,14 @@
+
+<div class="container">
+    <div *ngFor="let conseiller of conseillers" class="card">
+      <img [src]="conseiller.photo" alt="Photo du conseiller financier">
+      <div class="card-content">
+        <h2>{{conseiller.nom}}</h2>
+        <p>{{conseiller.titre}}</p>
+        <p>Expérience: {{conseiller.experience}} ans</p>
+        <p>Spécialités: {{conseiller.specialites.join(', ')}}</p>
+        <p>Localisation: {{conseiller.localisation}}</p>
+        <button (click)="prendreRendezVous()">Prendre un rendez-vous</button>
+      </div>
+    </div>
+  </div>

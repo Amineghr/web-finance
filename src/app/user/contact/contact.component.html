@@ -1,0 +1,79 @@
+<div class="container-fluid contact bg-light py-5" style="background-color: #b2b2b2;">
+    <div class="container py-5">
+        <!-- Header Contact -->
+        <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+            <h5 class="section-title px-3">Contact Us</h5>
+            <h1 class="mb-0">Contact For Any Problem</h1>
+        </div>
+        <!-- Contact Info -->
+        <div class="row g-5 align-items-center">
+            <!-- Contact Info Column -->
+            <div class="col-lg-4">
+                <div class="bg-white rounded p-4">
+                    <!-- Address -->
+                    <div class="text-center mb-4">
+                        <i class="fa fa-map-marker-alt fa-3x text-primary"></i>
+                        <h4 class="text-primary"><Address></Address></h4>
+                        <p class="mb-0"> Tunisie, Sfax</p>
+                    </div>
+                    <!-- Phone Numbers -->
+                    <div class="text-center mb-4">
+                        <i class="fa fa-phone-alt fa-3x text-primary mb-3"></i>
+                        <h4 class="text-primary">Mobile</h4>
+                        <p class="mb-0">+216 21331605</p>
+                        <p class="mb-0">+216 55523484</p>
+                    </div>
+                    <!-- Email Addresses -->
+                    <div class="text-center">
+                        <i class="fa fa-envelope-open fa-3x text-primary mb-3"></i>
+                        <h4 class="text-primary">Email</h4>
+                        <p class="mb-0">ghrabmine2&#64;gmail.com</p>
+                        <p class="mb-0">nouhabenjabbalh&#64;gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Contact Form Column -->
+            <div class="col-lg-8">
+                <h3 class="mb-2">Send us a message</h3>
+                <!-- Contact Form -->
+                <form #messageForm="ngForm" (ngSubmit)="sendMessage(messageForm)">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control border-0" id="name" placeholder="Your Name" name="name" ngModel required>
+                                <label for="name">Your Name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="email" class="form-control border-0" id="email" placeholder="Your Email" name="email" ngModel required>
+                                <label for="email">Your Email</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input type="text" class="form-control border-0" id="subject" placeholder="Subject" name="subject" ngModel required>
+                                <label for="subject">Subject</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 160px" name="message" ngModel required></textarea>
+                                <label for="message">Message</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+                <!-- Affichage du message de succès -->
+                <div class="col-12 mt-3" *ngIf="successMessage">
+                    <div class="alert alert-success" role="alert">
+                        {{ successMessage }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

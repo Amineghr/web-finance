@@ -1,0 +1,42 @@
+<div class="container">
+  <h2>Gestion des conseillers</h2>
+  
+  <!-- Bouton pour ajouter un nouveau conseiller -->
+  <button class="btn btn-primary mb-3" routerLink="/admin/addconseiller">Ajouter un conseiller</button>
+
+  <!-- Champ de recherche -->
+  <div class="search">
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Rechercher des conseillers...">
+    <button (click)="searchConseiller()">Rechercher</button>
+  </div>
+
+  <!-- Tableau pour afficher les conseillers -->
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nom</th>
+          <th>Pays</th>
+          <th>Société</th>
+          <th>Expertise</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let conseiller of conseillers$ | async">
+          <td>{{ conseiller['id'] }}</td>
+          <td>{{ conseiller.name }}</td>
+          <td>{{ conseiller.pays }}</td>
+          <td>{{ conseiller.societe }}</td>
+          <td>{{ conseiller.expertise }}</td>
+          <td>
+            <!-- Boutons pour éditer et supprimer un conseiller -->
+            <button class="btn btn-info btn-sm" (click)="editConseiller(conseiller['id'])">Éditer</button>
+            <button class="btn btn-danger btn-sm" (click)="deleteConseiller(conseiller['id'])">Supprimer</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

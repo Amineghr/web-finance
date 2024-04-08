@@ -1,0 +1,36 @@
+<!-- profil.component.html -->
+<div>
+    <h2>Profil</h2>
+    <form [formGroup]="profilForm" (ngSubmit)="submit()">
+      <div>
+        <label for="firstName">Prénom</label>
+        <input type="text" id="firstName" formControlName="firstName">
+        <div *ngIf="profilForm.get('firstName')?.invalid && profilForm.get('firstName')?.touched">
+          <span *ngIf="profilForm.get('firstName')?.errors?.['required']">Le prénom est requis.</span>
+        </div>
+      </div>
+      <div>
+        <label for="lastName">Nom</label>
+        <input type="text" id="lastName" formControlName="lastName">
+        <div *ngIf="profilForm.get('lastName')?.invalid && profilForm.get('lastName')?.touched">
+          <span *ngIf="profilForm.get('lastName')?.errors?.['required']">Le nom est requis.</span>
+        </div>
+      </div>
+      <div>
+        <label for="email">Adresse email</label>
+        <input type="email" id="email" formControlName="email">
+        <div *ngIf="profilForm.get('email')?.invalid && profilForm.get('email')?.touched">
+          <span *ngIf="profilForm.get('email')?.errors?.['required']">L'adresse email est requise.</span>
+          <span *ngIf="profilForm.get('email')?.errors?.['email']">L'adresse email n'est pas valide.</span>
+        </div>
+      </div>
+      <div>
+        <label for="phoneNumber">Numéro de téléphone</label>
+        <input type="text" id="phoneNumber" formControlName="phoneNumber">
+        <div *ngIf="profilForm.get('phoneNumber')?.invalid && profilForm.get('phoneNumber')?.touched">
+          <span *ngIf="profilForm.get('phoneNumber')?.errors?.['pattern']">Le numéro de téléphone n'est pas valide.</span>
+        </div>
+      </div>
+      <button type="submit">Enregistrer</button>
+    </form>
+</div>

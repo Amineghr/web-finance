@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "angular-fa405"
+  },
+  "targets": {
+    "angular-fa405": {
+      "hosting": {
+        "final": [
+          "angular-fa405"
+        ]
+      }
+    }
+  }
+}

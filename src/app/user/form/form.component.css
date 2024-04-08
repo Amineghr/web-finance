@@ -1,0 +1,110 @@
+/* Style de base du formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style des titres */
+  h1, h2 {
+    margin-bottom: 0.5rem;
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+  
+  /* Style des sections */
+  .section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* Style des labels */
+  label {
+    display: block;
+    font-weight: normal;
+    margin-bottom: 0.25rem;
+    font-size: 0.8rem;
+  }
+  
+  /* Style des champs de saisie */
+  input, textarea {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: sans-serif;
+  }
+  
+  /* Style du bouton */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }
+  
+  /* Style du résultat */
+  .resultat {
+    margin-top: 2rem;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  /* Style des paragraphes du résultat */
+  .resultat p {
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+  }
+  
+  @media (max-width: 768px) {
+    /* Style pour les écrans mobiles */
+    form {
+      width: 90%;
+    }
+  
+    .resultat {
+      grid-template-columns: 1fr;
+    }
+  }
+  .resultat {
+    background-color: #f7f7f7;
+    color: #444;
+  }
+  
+  .resultat p {
+    margin-bottom: 0.25rem;
+  }
+  
+  .resultat .valeur {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .resultat .icone {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+    color: #4CAF50;
+  }
+    

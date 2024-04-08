@@ -1,0 +1,39 @@
+
+  
+
+
+.card {
+   
+    width: 1000px; /* Largeur totale de la carte */
+    height: 300px; /* Hauteur totale de la carte */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 20px auto; /* Centre la carte horizontalement */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid; /* Utiliser la disposition en grille */
+    grid-template-columns: 1fr 2fr; /* Diviser la carte en trois colonnes */
+  }
+  
+  .card img {
+    width: 100%; /* Largeur pleine de l'image */
+    height: 100%; /* Hauteur pleine de l'image */
+    object-fit: cover; /* Ajuster l'image pour couvrir la zone */
+    border-radius: 10px 0 0 10px; /* Coins arrondis seulement en haut */
+  }
+  
+  .card-content {
+    padding: 20px;
+    background-color:#989aa0; /* Fond blanc pour la zone de texte */
+  }
+  
+  .card h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .card p {
+    margin: 5px 0;
+    color: #666;
+  }
+  
